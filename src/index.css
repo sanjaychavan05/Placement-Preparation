@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: hsl(245, 58%, 51%);
+  --color-primary-dark: hsl(245, 58%, 42%);
+  --color-primary-light: hsl(245, 58%, 96%);
+}
+
+@keyframes dash-in {
+  from { stroke-dashoffset: 440; }
+  to   { stroke-dashoffset: var(--dash-offset); }
+}
+
+.readiness-ring {
+  animation: dash-in 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
